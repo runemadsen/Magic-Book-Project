@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="Magic Book Design Prototype">
+	<meta name="author" content="Miguel Bermudez">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="/stylesheets/style.css">
+
+	<script src="js/libs/modernizr-2.0.min.js"></script>
+	<script src="js/libs/respond.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1 id="title">Chapter 6. Autonomous Agents</h1>
+		<blockquote>
+			<p>“This is an exercise in fictional science, or science fiction, if you like that better.”</p>
+			<footer>Valentino Braitenberg </footer>
+		</blockquote>
+	</header>
+		
+	<div id="main" role="main">
+		<article>
+			<section>
+				<h1>6.1 Forces from Within</h1>
+				<p>Believe it or not, there is a purpose. Well, at least there’s a purpose for the first five chapters of this book. We could stop right here; after all, we’ve looked at several different ways of modeling motion and simulating physics. Angry Birds, here we come!</p>
+				<p>Still, let’s think for a moment. Why are we here? The <em>nature</em> of code, right? What have we been designing so far? Inanimate objects. Lifeless shapes sitting on our screens that flop around when affected by forces in their environment. What if we could breathe life into those shapes? What if those shapes could live by their own rules? Can shapes have hopes and dreams and fears? This is what we are here in this chapter to do—develop <em>autonomous agents</em>.</p>
+				<p>The term <em><b>autonomous agent</b></em> generally refers to an entity that makes its own choices about how to act in its environment without any influence from a leader or global plan. For us, “acting” will mean moving. This addition is a significant conceptual leap.  Instead of a box sitting on a boundary waiting to be pushed by another falling box, we are now going to design a box that has the ability and “desire” to leap out of the way of that other falling box, if it so chooses.   While the concept of forces that come from within is a major shift in our design thinking, our code base will barely change, as these desires and actions are simply that—<em>forces_</em>.</p>
+				<p>Here are three key components of autonomous agents that we’ll want to keep in mind as we build our examples.</p>
+					<ul>
+						<li><b>An autonomous agent has a <em>limited</em> ability to perceive environment.</b> It makes sense that a living, breathing being should have an awareness of its environment. What does this mean for us, however? As we look at examples in this chapter, we will point out programming techniques for allowing objects to store references to other objects and therefore “perceive” their environment. It’s also crucial that we consider the word <em><b>limited here</b></em>. Are we designing a all-knowing rectangle that flies around a Processing window aware of everything else in that window? Or are we creating a shape that can only examine any other object within 15 pixels of itself? - <em><b>Of course, there is no right answer to this question; it all depends.</b></em> We’ll explore some possibilities as we move forward. For a simulation to feel more “natural,” however, limitations are a good thing. An insect, for example, may only be aware of the sights and smells that immediately surround it?   For a real-world creature, we could study the exact science of  these limitations. Luckily for us, we can just make stuff up and try it out.</li>
+						<li><em>An autonomous agent processes the information from its environment and calculates an action.</em> This will be the easy part for us, as the action is a force. The environment might tell the agent that there’s a big scary-looking shark swimming right at it, and the action will be a powerful force in the opposite direction.</li>
+						<li><b>An autonomous agent has no leader.</b> This third principle is something we care a little less about. After all, if you are designing a system where it makes sense to have a leader barking commands at various entities, then that’s what you’ll want to implement.  Nevertheless, many of these examples will have no leader for an important reason. As we get to the end of this chapter and examine group behaviors, we will look at designing collections of autonomous agents that exhibit the properties of complex systems— intelligent and structured group dynamics that emerge not from a leader, but from the local interactions of the elements themselves.</li>
+					</ul>
+				<p>	In the late 1980s, computer scientist Craig Reynolds developed algorithmic steering behaviors for animated characters. These behaviors allowed individual elements to navigate their digital environments in a “lifelike” manner with strategies for fleeing, wandering, arriving, pursuing, evading, etc. Used in the case of a single autonomous agent, these behaviors are fairly simple to understand and implement. In addition, by building a system of multiple characters that steer themselves according to simple locally based rules, surprising levels of complexity emerge. The most famous example is Reynolds’s “boids” model for “flocking/swarming” behavior.</p>
+			</section>'
+			
+			<section>
+				<h1>6.2 Vehicles and Steering</h1>
+				<p>Now that we understand the core concepts behind autonomous agents, we can begin writing the code. There are many places we could start. Artificial simulations of ant and termite colonies are fantastic demonstrations of systems of autonomous agents (for more, I encourage you to read <em>Turtles, Termites, and Traffic Jams</em> by Mitchel Resnick).  However, we want to start by examining agent behaviors that build on the work we’ve done in the first five chapters of this book: modeling motion with vectors and driving motion with forces. And so it’s time to rename our Mover class that became our Particle class once again. This time we are going to call it <em><b>Vehicle</b></em>.</p>
+				
+				
+			</section>
+			
+		</article>
+			 
+		
+		
+		<article>
+			<header>
+				<h2>Your article heading</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra. Pellentesque auctor neque quis nisl lacinia id rutrum lacus venenatis.</p>
+			</header>
+			<h3>A smaller heading</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra. Pellentesque auctor neque quis nisl lacinia id rutrum lacus venenatis.</p>	
+			<h3>A smaller heading</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra. Pellentesque auctor neque quis nisl lacinia id rutrum lacus venenatis.</p>
+			<footer>
+			<h3>About the author</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
+			</footer>
+		</article>
+	</div>
+	<div id="footer-container">
+		<footer class="wrapper">
+			<h3>A nice footer</h3>
+		</footer>
+	</div>
+</body>
+</html>

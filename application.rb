@@ -14,6 +14,10 @@ class Application < Sinatra::Base
     @document = AsciiDoc.new(open("public/test.asciidoc").read)
     erb :parse
   end
+  
+  get '/design' do 
+    erb :design
+  end
 
   not_found do
     erb :notfound
