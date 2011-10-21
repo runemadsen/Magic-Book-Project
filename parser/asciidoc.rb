@@ -1,8 +1,11 @@
 require './parser/asciielement.rb'
 require './parser/asciilines.rb'
+require './parser/asciiblock.rb'
+require './parser/asciichars.rb'
 require './parser/asciiplugins.rb'
-# require plugins first
+Dir["./parser/custom/*.rb"].each {|file| require file }
 Dir["./parser/standard/*.rb"].each {|file| require file }
+Dir["./parser/char/*.rb"].each {|file| require file }
 
 class AsciiDoc
   
@@ -27,8 +30,9 @@ class AsciiDoc
   private
   
   def parse_lines
+    order_plugins
     detect_plugins
-    while @lines.next_line do
+    while @lines.shift_line do
       unless @lines.current_line =~ /^\s*$/
         detect_plugins
       end

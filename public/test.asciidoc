@@ -101,7 +101,7 @@ PVector desired = PVector.sub(target,location);
 desired.normalize();
 desired.mult(maxspeed);
 ---
-￼
+
 image:imgs/seek3.jpg[Seek 3]
 
 Putting this all together, we can write a function called seek() that receives a PVector target and calculates a steering force towards that target.
@@ -139,10 +139,11 @@ class Vehicle {
   float maxforce;		// Maximum force
 ---
 
+
 followed by:
 
 [source,java]
----  
+---
 void seek(PVector target) {
     PVector desired = PVector.sub(target,location);  
     desired.normalize();
