@@ -48,7 +48,21 @@
 			<section>
 				<h1>6.2 Vehicles and Steering</h1>
 				<p>Now that we understand the core concepts behind autonomous agents, we can begin writing the code. There are many places we could start. Artificial simulations of ant and termite colonies are fantastic demonstrations of systems of autonomous agents (for more, I encourage you to read <em>Turtles, Termites, and Traffic Jams</em> by Mitchel Resnick).  However, we want to start by examining agent behaviors that build on the work we’ve done in the first five chapters of this book: modeling motion with vectors and driving motion with forces. And so it’s time to rename our Mover class that became our Particle class once again. This time we are going to call it <em><b>Vehicle</b></em>.</p>
+				<div class="source">
+					<pre><code>	class Vehicle { 
+		PVector location;
+		PVector velocity;
+		PVector acceleration;
+		$$ What else do we need to add?
+	}</code>
+
+					</pre>
+				</div> <!-- .source -->
 				
+				<section class="breakout">
+					<h1>Why Vehicle?</h1>
+					<p>In 1986, Italian neuroscientist and cyberneticist Valentino Braitenberg described a series of hypothetical vehicles with simple internal structures in his book Vehicles: Experiments in Synthetic Psychology.  Braitenberg argues that his extraordinarily simple mechanical vehicles manifest behaviors such as fear, aggression, love, foresight, and optimism.  Reynolds took his inspiration from Braitenberg, and we’ll take ours from Reynolds.    Reynolds uses the word “Vehicle” to describe his autonomous agents, so we will follow suit.</p>
+				</section> <!-- .breakout -->
 				
 			</section>
 			
