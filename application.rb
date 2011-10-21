@@ -16,6 +16,7 @@ class Application < Sinatra::Base
   end
   
   get '/design' do 
+    @folder = "/images/template1/html/imgs"
     erb :design
   end
 
