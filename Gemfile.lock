@@ -1,3 +1,8 @@
+PATH
+  remote: gems/asciidoc
+  specs:
+    asciidoc (0.0.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -11,4 +16,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  asciidoc!
   sinatra
