@@ -21,10 +21,10 @@ class Application < Sinatra::Base
   end
   
   get '/design' do 
-    @folder = "/images/template1/html/imgs"
+    @folder = "/designtest/"
     erb :design
   end
-
+  
   not_found do
     erb :notfound
   end
