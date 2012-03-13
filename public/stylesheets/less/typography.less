@@ -1,0 +1,77 @@
+// Font Stacks
+@font-face {
+    font-family: 'Chunkfive';
+    src: url('fonts/Chunkfive-webfont.eot');
+    src: url('fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Chunkfive-webfont.woff') format('woff'),
+         url('fonts/Chunkfive-webfont.ttf') format('truetype'),
+         url('fonts/Chunkfive-webfont.svg#Chunkfive') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#font {
+  .shorthand(@weight: normal, @size: 1.4em, @lineHeight: 2.0em) {
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .sans-serif(@weight: normal, @size: 1.4em, @lineHeight: 2.0em) {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .serif(@weight: normal, @size: 1.4em, @lineHeight: 2.0em) {
+    font-family: "Georgia", Times New Roman, Times, serif;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .monospace(@weight: normal, @size: 12px, @lineHeight: 20px) {
+    font-family: "Monaco", Courier New, monospace;
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
+  .chunk(@weight: normal, @size: 1.2em, @lineHeight: 2.0em ) {
+      font-family: "Chunkfive";
+      font-size: @size;
+      font-weight: @weight;
+      line-height: @lineHeight;
+  }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    font-weight: normal;
+    color: @lightGray;
+  }
+}
+
+h1 {
+  font-family: "Chunkfive";
+  font-size: 3em;
+  font-weight: normal;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 1.8em;
+  }
+}
+h2 {
+  font-size: 2.4em;
+  line-height: @baseLineHeight * 2;
+  small {
+    font-size: 1.8em;
+  }
+}
+h3 {
+  line-height: @baseLineHeight * 1.5;
+  font-size: 1.8em;
+  small {
+    font-size: 1.4em;
+  }
+}

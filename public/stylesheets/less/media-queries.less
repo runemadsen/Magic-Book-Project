@@ -1,0 +1,82 @@
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+
+
+/* iPad and under */
+ @media only screen and (max-width: 768px) {
+     body {
+         -webkit-text-size-adjust: none;
+     }
+     .chpt {
+         font-size: 0.5em;
+         #main {
+             width: 768px; 
+         }
+        aside {
+          float: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          header {
+              h1 {
+                  line-height: 2em;
+                  margin: 0;
+                  padding: 0 5px 0 20px;
+                  span {
+                      font-size: 0.75em;
+                      padding: 5px 0 5px 5px;
+                  }
+              }
+          }
+          nav {
+              ul {
+                  float: left;
+                  li {
+                      float: left;
+                      margin: 10px 20px 10px 0;
+                      a {
+                          strong {
+                              font-size: 1.2em;
+                              margin-bottom: 0.25em;
+                          }
+                      }
+                  }
+              }
+          }
+          
+        }
+        .content {
+            margin-top: 22em;
+        }
+     }
+ }
+ 
+ /* Tablet Portrait size to standard 960 (devices and browsers) */
+ @media only screen and (min-width: 768px) and (max-width: 959px) {
+     .chpt {
+          font-size: 0.55em;
+     }
+ }
+
+@media only screen and (min-width: 1280px)  {
+    .chpt {
+         font-size: 1em;
+         header {
+             font-size: 1.0em !important;
+         }
+         nav {
+             li {
+                  font-size: 1.1em ;
+              }
+         }
+         #main {
+             width: 1280px;
+         }
+
+    }
+    
+} 
+ 

@@ -1,0 +1,119 @@
+@import "normalize.less";
+@import "variables.less";
+@import "typography.less";
+
+
+/* ===== Primary Styles ========================================================
+ Author: Miguel Bermudez
+ ========================================================================== */
+
+ body {
+   background: #FFFFFF;
+   color: @textColor;
+   font-size: @baseFontSize;
+   margin: 0;
+ }
+ 
+ a {
+     text-decoration: none;
+ }
+ p, li, dl {
+     font-size: 1.6em;
+ }
+ 
+ li {
+     margin-bottom: 1em;
+ }
+ 
+ 
+ /* ===== Chapter Styles ================================================= */
+ .chpt {
+     #main {
+         clear: both;
+         float: left;
+         overflow: hidden;
+         position: relative;
+         width: 1024px;
+     }
+   h1 {
+    
+   }
+   p {
+     
+   }
+   aside {
+     background: @offwhite;
+     float: left;
+
+     margin: 0;
+     overflow: hidden;
+     width: 20%;
+     header {
+        #font > .sans-serif(normal, 1.4em, 1.0em);
+        text-transform: lowercase;
+        font-variant: small-caps;
+        text-align: center;
+        padding-top: @asidepadding;
+        span {
+            #font > .chunk(normal, 1.6em, 1.5em);
+            font-family: "Chunkfive";
+            color: @textColor;
+            font-variant: normal;
+            letter-spacing: .0625em;
+        }
+        h1 {
+            #font > .chunk(normal, 1.8em, 1em);
+            background: @blue;
+            font-variant: normal;
+            margin: 1.5em 0;
+            padding-bottom: @asidepadding;
+            padding-left: @asidepadding;
+            text-align: left;
+            letter-spacing: 0;
+            span {
+                #font > .sans-serif(normal, 0.5em, 1.0em);
+                background: @offwhite;
+                display: block;
+                padding: 0 0 0.25em 0.25em;
+            }
+        }
+     } /* -- /header*/
+     nav {
+         padding-left: @asidepadding;
+         li {
+             display: block;
+             margin-bottom: @linkspacing;
+             a {
+                 
+                 strong {
+                     #font > .sans-serif(normal, 1.4em, 1.0em);
+                     display: block;
+                     color: @textColor;
+                 }
+             }
+         }
+     } /* -- /nav*/
+   }
+   .content {
+     float: left;
+     margin: 0;
+     padding: 1em 0 1em 1em;
+     width: 70%;
+   }
+   #footer-container {
+       clear: both;
+   }
+ }
+
+
+
+
+
+
+
+
+
+
+@import "media-queries.less";
+@import "helpers.less";
+@import "print.less";
