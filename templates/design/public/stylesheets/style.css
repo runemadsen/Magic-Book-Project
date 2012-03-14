@@ -332,100 +332,16 @@ h6 {
 a {
   text-decoration: none;
 }
-p,
-li,
-dl {
-  font-size: 1.6em;
-}
-li {
-  margin-bottom: 1em;
-}
-/* Chapter Styles
+/* Book Styles
  ----------------------------------------------------------------------------------------*/
-.chpt #main {
+#container {
   clear: both;
   float: left;
   overflow: hidden;
   position: relative;
   width: 1024px;
 }
-.chpt aside {
-  background: #e0e4cc;
-  float: left;
-  margin: 0;
-  overflow: hidden;
-  width: 20%;
-  /* -- /header*/
-
-  /* -- /nav*/
-
-}
-.chpt aside header {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.4em;
-  font-weight: normal;
-  line-height: 1em;
-  text-transform: lowercase;
-  font-variant: small-caps;
-  text-align: center;
-  padding-top: 20px;
-}
-.chpt aside header span {
-  font-family: "Chunkfive";
-  font-size: 1.6em;
-  font-weight: normal;
-  line-height: 1.5em;
-  font-family: "Chunkfive";
-  color: #3f433c;
-  font-variant: normal;
-  letter-spacing: .0625em;
-}
-.chpt aside header h1 {
-  font-family: "Chunkfive";
-  font-size: 1.8em;
-  font-weight: normal;
-  line-height: 1em;
-  background: #69d2e7;
-  font-variant: normal;
-  margin: 1.5em 0;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  text-align: left;
-  letter-spacing: 0;
-}
-.chpt aside header h1 span {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.5em;
-  font-weight: normal;
-  line-height: 1em;
-  background: #e0e4cc;
-  display: block;
-  padding: 0 0 0.25em 0.25em;
-}
-.chpt aside nav {
-  padding-left: 20px;
-}
-.chpt aside nav li {
-  display: block;
-  margin-bottom: 10px;
-}
-.chpt aside nav li a strong {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.4em;
-  font-weight: normal;
-  line-height: 1em;
-  display: block;
-  color: #3f433c;
-}
-.chpt .content {
-  float: left;
-  margin: 0;
-  padding: 1em 0 1em 1em;
-  width: 70%;
-}
-.chpt #footer-container {
-  clear: both;
-}
+/*#container*/
 /* =============================================================================
    Media Queries
    ========================================================================== */

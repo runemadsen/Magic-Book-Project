@@ -24,7 +24,7 @@ body {
  background: #FFFFFF;
  color: @textColor;
  font-size: @baseFontSize;
- line-height: 1.0em;
+ line-height: @baseLineHeight;
  margin: 0;
 }
 
@@ -39,6 +39,13 @@ a {
 
 p, li, dl {
   font-size: 1.6em;
+  line-height: @baseLineHeight * 1.5;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
 }
  
 li {
@@ -46,86 +53,75 @@ li {
 }
  
  
- /* Chapter Styles
+ /* Book Styles
  ----------------------------------------------------------------------------------------*/
  
- .chpt {
-     #main {
-         clear: both;
-         float: left;
-         overflow: hidden;
-         position: relative;
-         width: 1024px;
-     }
-   h1 {
-    
-   }
-   p {
-     
-   }
-   aside {
-     background: @offwhite;
-     float: left;
+#container {
+   clear: both;
+   float: left;
+   overflow: hidden;
+   position: relative;
+   width: 1024px;
 
-     margin: 0;
-     overflow: hidden;
-     width: 20%;
-     header {
-        #font > .sans-serif(normal, 1.4em, 1.0em);
-        text-transform: lowercase;
-        font-variant: small-caps;
-        text-align: center;
-        padding-top: @asidepadding;
-        span {
-            #font > .chunk(normal, 1.6em, 1.5em);
-            font-family: "Chunkfive";
-            color: @textColor;
-            font-variant: normal;
-            letter-spacing: .0625em;
-        }
-        h1 {
-            #font > .chunk(normal, 1.8em, 1em);
-            background: @blue;
-            font-variant: normal;
-            margin: 1.5em 0;
-            padding-bottom: @asidepadding;
-            padding-left: @asidepadding;
-            text-align: left;
-            letter-spacing: 0;
-            span {
-                #font > .sans-serif(normal, 0.5em, 1.0em);
-                background: @offwhite;
-                display: block;
-                padding: 0 0 0.25em 0.25em;
-            }
-        }
-     } /* -- /header*/
-     nav {
-         padding-left: @asidepadding;
-         li {
-             display: block;
-             margin-bottom: @linkspacing;
-             a {
-                 
-                 strong {
-                     #font > .sans-serif(normal, 1.4em, 1.0em);
-                     display: block;
-                     color: @textColor;
-                 }
-             }
-         }
-     } /* -- /nav*/
-   }
-   .content {
-     float: left;
-     margin: 0;
-     padding: 1em 0 1em 1em;
-     width: 70%;
-   }
-   #footer-container {
-       clear: both;
-   }
- }
+} /*#container*/
+
+aside {
+  background: @offwhite;
+  float: left;
+  margin: 0;
+  padding: 20px 0 0 10px;
+  width: 28.3203125%; /* 290 / 1024 */
+  
+  li {
+    line-height: 1em;
+  }
+  
+  ul li ul li  {
+    text-align: right;
+  }
+  
+  a.chpt-title {
+     #font > .chunk(normal, 1.5625em, 2.34375em);
+     background: @blue;
+     margin: 1.5em 0;
+  }
+  
+  a.chpt-section {
+    #font > .sans-serif(normal, 0.615384615em, 0.923076923em);
+    background: @offwhite;
+  }
+  
+  nav {
+    
+  } /*  /nav  */ 
+} /*  /aside  */
+
+#content {
+  float: left;
+  padding: 20px 20px 0 10px;
+  width: 67.7734375%; /* 694 / 1024 */
+  h2 {
+    #font > .headline(800, 4.0em, 1.0em );
+    
+  }
+  p, li {
+    #font > .serif();
+  }
+  .breakout_box {
+    #font > .headline(200, 1.8em, 1.5em);
+    h2{ 
+      #font > .headline(800, 2.0em, 1.0em);
+      font-style: normal;
+    }
+    background: lighten(@offwhite, 50%);
+    border: 1px solid @darkorange;
+    padding: 20px;
+    font-style: italic;
+  }
+} /*  #content  */
+
+
+
 
 
 

@@ -2,11 +2,11 @@
 
 <ul>
 	<% hierarchy.each do |hash| %>
-  <li class="chpt-title"><a href='#<%= hash[:el].attributes[:href] %>'><%= hash[:el].children[0] %></a>
+  <li><a class="chpt-title" href='#<%= hash[:el].attributes[:href] %>'><%= hash[:el].children[0] %></a>
       <% if hash[:children].size > 0 %>
       <ul>
   			<% hash[:children].each do |child| %>
-        <li class="chpt-section"><a href='#<%= child[:el].attributes[:href] %>'><%= child[:el].children[0] %></a></li>
+        <li><a class="chpt-section"href='#<%= child[:el].attributes[:href] %>'><%= child[:el].children[0] %></a></li>
   			<% end %>
       </ul>
       <% end %>
