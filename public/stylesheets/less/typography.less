@@ -23,7 +23,8 @@
     line-height: @lineHeight;
   }
   .serif(@weight: normal, @size: 1.4em, @lineHeight: 2.0em) {
-    font-family: "Georgia", Times New Roman, Times, serif;
+    //font-family: "Georgia", Times New Roman, Times, serif;
+    font-family: 'Gentium Book Basic', serif;
     font-size: @size;
     font-weight: @weight;
     line-height: @lineHeight;
@@ -40,16 +41,18 @@
       font-weight: @weight;
       line-height: @lineHeight;
   }
+  .headline(@weight: 800, @size: 3.0em, @lineHeight: 2.0em ) {
+    font-family: 'open sans';
+    font-size: @size;
+    font-weight: @weight;
+    line-height: @lineHeight;
+  }
 }
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   text-rendering: optimizelegibility; // Fix the character spacing for headings
-  small {
-    font-weight: normal;
-    color: @lightGray;
-  }
 }
 
 h1 {

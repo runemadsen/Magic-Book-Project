@@ -7,26 +7,48 @@
  Author: Miguel Bermudez
  ========================================================================== */
 
- body {
-   background: #FFFFFF;
-   color: @textColor;
-   font-size: @baseFontSize;
-   margin: 0;
- }
+
+/* Root
+----------------------------------------------------------------------------------------*/
+html {
+  overflow-y: scroll;
+  background: #FFFFFF;
+}
+
+img, embed, object, video { max-width: 100%; }
+.ie6 img.full, .ie6 object.full, .ie6 embed, .ie6 video { width: 100%; }
+
+/* Core
+----------------------------------------------------------------------------------------*/
+body {
+ background: #FFFFFF;
+ color: @textColor;
+ font-size: @baseFontSize;
+ line-height: 1.0em;
+ margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.809em;
+  line-height: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, li, dl {
+  font-size: 1.6em;
+}
  
- a {
-     text-decoration: none;
- }
- p, li, dl {
-     font-size: 1.6em;
- }
- 
- li {
-     margin-bottom: 1em;
- }
+li {
+  margin-bottom: 1em;
+}
  
  
- /* ===== Chapter Styles ================================================= */
+ /* Chapter Styles
+ ----------------------------------------------------------------------------------------*/
+ 
  .chpt {
      #main {
          clear: both;
