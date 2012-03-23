@@ -1,6 +1,12 @@
+body {
+}
+
 #container {
-	width: 800px;
+	width: 14.605cm;  /* This is the width of the page, 7.25 inches - 1.5 inch margin = 5.75 inches*/
 	margin: 0 auto;
+	font-size: 12px;
+	line-height: normal;
+  
 }
 
 .breakout_box {
@@ -15,6 +21,7 @@ pre {
 	white-space: -pre-wrap;      /* Opera 4-6 */
 	white-space: -o-pre-wrap;    /* Opera 7 */
 	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	
 }
 
 img {
@@ -55,6 +62,7 @@ a relatively positioned parent. */
 
 /* Div wrapper for code comments */
 .code-comment {
+  font-size: 10px;
   clear: right;
   color: #777;
   display: block;
