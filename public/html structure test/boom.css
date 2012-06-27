@@ -162,7 +162,7 @@ table.lined td, table.lined th {
 @page :left {
   @top-left {
     font: 11pt "Gill Sans", serif;
-    content: "Cascading Style Sheets";
+    content: "The Nature of Code";
     vertical-align: bottom;
     padding-bottom: 2em;
   }
