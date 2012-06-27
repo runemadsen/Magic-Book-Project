@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>The Nature of Code</title>
+<meta name="author" content="Dan Shiffman"/>
+<link rel="stylesheet" type="text/css" href="boom.css"/>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+
+<div class="frontcover">
+<img src="canvas.jpg"/>
+<h1>The Nature of Code</h1>
+<h2>Subtitle</h2>
+<h3>h3</h3>
+<p>Some text</p>
+</div>
+
+<div class="halftitlepage">
+<h1 class="no-toc">The Nature of Code</h1>
+<h2 class="no-toc">Subtitle</h2>
+<h3 class="no-toc">X Edition</h3>
+</div>
+
+<div class="titlepage">
+<h1 class="no-toc">The Nature of Code</h1>
+<h2 class="no-toc">Subtitle</h2>
+<h3 class="no-toc">X Edition</h3>
+
+<p class="no-toc">Dan Shiffman</p>
+<!-- also, the publisher's name would typically be printed here -->
+</div>
+
+<div class="imprint">
+<p>Copyright &copy; 2012 Dan Shiffman</p>
+
+</div>
+
+<div class="toc" id="toc-h-1">
+<h1>Table of Contents</h1>
+
+<ul class="toc">
+<li class="frontmatter"><a href="#toc-h-1">Table of Contents</a></li>
+<li class="frontmatter"><a href="#preface-h-1">Preface</a></li>
+<li class="chapter"><a href="#html-h-1">The Web and HTML</a>
+  <ul>
+  <li class="section"><a href="#the-web">The Web</a>
+    <ul>
+    <li class="section"><a href="#development">Development of the Web</a></li>
+    <li class="section"><a href="#images">Adding images</a></li>
+    </ul>
+  </li>
+  </ul>
+</li>
+<li class="chapter"><a href="#css-h-1">CSS</a>
+  <ul>
+  <li class="section"><a href="#rules">Rules and Style Sheets</a></li>
+  </ul>
+</li>
+<li class="endmatter"><a href="#index-h-1">Index</a></li>
+</ul>
+
+</div>
+
+<div class="preface" id="preface-h-1">
+<h1>Preface</h1>
+
+<p>is there a preface? bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+
+<p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+	bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+	bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+
+<p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+	bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+	bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+
+<p class="author">Dan Shiffman<br />
+Oslo/Antibes<br />July 2012</p>
+
+</div>
+<div class="chapter" id="html-h-1">
+<h1 style="counter-reset: page 1">Chapter 1.  Vectors</h1>
+<p class="sidenote">Roger, Roger. What's our vector, Victor?</p>
+<!--><p class="quote-attribution">Captain Oveur (Airplane)</p>-->
+
+
+<p>This book is all about looking at the world around us and coming up with clever ways to simulate that world with code.  Divided into three parts, the book will start by looking at basic physics—how an apple falls from a tree, a pendulum swings in the air, the earth revolves around the sun, etc.  Absolutely everything contained within the first five chapters of this book requires the use of the most basic building block for programming motion—the <em>vector</em>.   And so this is where we begin our story.</p>
+
+<p>Now, the word <em>vector</em> can mean a lot of different things. Vector is the name of a new wave rock band formed in Sacramento, CA in the early 1980s.  It’s the name of a breakfast cereal manufactured by Kellogg’s Canada.   In the field of epidemiology, a vector is used to describe an organism that transmits infection from one host to another.  In the C++ programming language, a Vector (std::vector) is an implementation of a dynamically resizable array data structure.  While all these definitions are interesting, they’re not what we are looking for.   What we want is called a <em>Euclidean vector</em> (named for the Greek mathematician Euclid and also known as a geometric vector).  When you see the term “vector” in this book, you can assume it refers to a Euclidean vector defined as:</p>
+
+<div class="sidenote" id="specs">
+	A vector is an entity that has both magnitude and direction
+</div>
+
+<p>A vector is typically drawn as a arrow; the direction is indicated by where the arrow is pointing, and the magnitude by the length of the arrow itself.</p>
+
+<div class="figure" id="fig-loaded">
+  <p class="caption">A caption</p>
+  <p class="art"><img alt="[image]" src="imgs/chapter01_1-01.png" style="width: 100%"/></p>
+</div>
+
+<p>In the diagram to the left [notetoself]*[reference figure # instead?]*, the vector is drawn as an arrow from point A to point B and serves as an instruction for how to travel from A to B.</p>
+
+<div class="section" id="the-web">
+	<h2>1.1 Vectors, You Complete Me</h2>
+
+<p>Before we dive into more of the details about vectors, let’s look at a basic Processing example that demonstrates why we should care about vectors in the first place.  If you’ve read any of the introductory Processing textbooks or taken a class on programming with Processing (and hopefully you’ve done one of these things to help prepare you for this book), you probably, at one point or another, learned to how to write a simple bouncing ball sketch.</p>
+
+<div class="figure" id="fig-loaded-2">
+  <p class="caption">A caption</p>
+  <p class="art"><img alt="If you are reading this book as a PDF or in print, then you will only see screenshots of the code.	Motion, of course, is a key element of our discussion, so to the extent possible, the static screenshots will include trails to give a sense of the behavior. For more about how to draw trails, see the code examples available for download." src="imgs/chapter01_2-01.png" style="width: 100%"/></p>
+</div>
+
+<div class="sidebar" id="example">
+	A vector is an entity that has both magnitude and direction
+	<h2 class="no-toc">Example 1.1: Bouncing ball with no vectors</h2>
+	<code>
+		// Variables for location and speed of ball.
+	float x = 100;
+	float y = 100;
+	float xspeed = 1;
+	float yspeed = 3.3;
+
+	// Remember how Processing works?  setup() is executed once when the sketch starts and draw() loops forever and ever (until you quit).
+	void setup() {
+	  size(200,200);
+	  smooth();
+	  background(255);
+	}
+
+	void draw() {
+	  background(255);
+
+	  // Move the ball according to its speed.
+	  x = x + xspeed;
+	  y = y + yspeed;
+	}</code>
+	
+</div>
+</div>
+</div>
+</body>
+</html>

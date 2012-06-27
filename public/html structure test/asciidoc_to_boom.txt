@@ -1,0 +1,15 @@
+In asciidoc. Not in Boom project: 
+- class="quote-attribution"
+
+[NOTE] --> class="sidebar"
+
+
+----add to my own style.css----
+
+.quote-attribution{
+
+}
+
+.note{
+
+}
