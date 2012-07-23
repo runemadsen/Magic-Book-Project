@@ -15,6 +15,7 @@ GEM
     rack-protection (1.2.0)
       rack
     redcarpet (2.1.0)
+    ritex (1.0.1)
     rocco (0.8.2)
       mustache
       redcarpet
@@ -32,6 +33,7 @@ PLATFORMS
 DEPENDENCIES
   asciidoc!
   mustache
+  ritex
   rocco
   shotgun
   sinatra
