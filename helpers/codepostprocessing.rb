@@ -1,7 +1,7 @@
 def formatCodeCommentPairs(code, comment)
   # No comment, skip to code
   if comment.length == 0
-    return "NO COMMENT <code><pre>#{parseCode(code)}</pre></code>"
+    return "<code><pre>#{parseCode(code)}</pre></code>"
   else
     return "<div class='code-comment'>#{comment}</div><code><pre>#{parseCode(code)}</pre></code>"
   end
