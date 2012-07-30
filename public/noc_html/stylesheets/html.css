@@ -353,6 +353,10 @@ a relatively positioned parent. */
   overflow-x: hidden;
 }
 
+.code-comment-pair.no-comment {
+  margin-bottom: 0;
+}
+
 .code-comment-line {
   border-top: 1px dashed #C7C7C7;
   height: 2px;
@@ -445,7 +449,7 @@ dt, dd {
 }
 
 dt {
- 	width:30%;	
+ 	width:30%;
 }
 
 dd {

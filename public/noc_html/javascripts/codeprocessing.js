@@ -1,35 +1,5 @@
 // Comments are documented according to http://tomdoc.org/
 
-// Public: Add classes or add strong and em attributes to lines of code
-// by detecting inline comments matching the pattern // [<STYLE>]
-// Remove the comment from the DOM and apply styles to the parent
-// .one-line element.
-//
-// comment - a jQuery object with corresponding to $('.c1')
-//
-// Return nothing.
-var addStylesToCodeLines = function(comment) {
-	match = $(comment).html().match(/\[(.*)\]/);
-
-	if(match !== null && match.length >= 1){
-		line = $(comment).parent('span.one-line');
-		// Remove the comment and trailing whitespace.
-		$(line).find('.c1').remove().end().html($(line).html().replace(/\s*$/,''));
-		// Split any styles by commas.
-		styles = match[1].split(',');
-		// Add any comment values with strong, em, or class names.
-		for(l = 0; l < styles.length; l++) {
-			if(styles[l] === 'bold') {
-				line.html("<strong>" + line.html() + "</strong>");
-			} else if (styles[l] === 'italic') {
-				line.html("<em>" + line.html() + "</em>");
-			} else {
-				line.addClass(styles[l]);
-			}
-		}
-	}
-}
-
 // Public: Toggle between formatted code markup and a textarea of the raw code.
 // Changes text of the button based on data attributes of button.toggle.
 // To change what the button says, see `views/source.html.erb`.
