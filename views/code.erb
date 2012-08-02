@@ -1,7 +1,5 @@
 <div class="code-block">
 <% @sections.each do |section| %>
-  <div class="code-comment-pair <%= (section[0].length > 0) ? "" : "no-comment" %>">
-    <%= formatCodeCommentPairs(section[1],section[0]) %>
-  </div>
+  <%= formatCodeCommentPairs(section[1],section[0]) %>
 <% end %>
 </div>
