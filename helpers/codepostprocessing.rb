@@ -6,7 +6,7 @@ def formatCodeCommentPairs(code, comment)
     response += "</div>"
     response
   else
-    response = "<div class='code-comment-pair #{stretch_or_no_comment(comment)}'>"
+    response = "<div class='code-comment-pair #{comment_type(comment)}'>"
     response += look_for_multiline(comment)
     response += "<code><pre>#{parseCode(code)}</pre></code>"
     response += "</div>"
@@ -14,18 +14,23 @@ def formatCodeCommentPairs(code, comment)
   end
 end
 
-def stretch_or_no_comment(comment)
+def comment_type(comment)
   if comment.match(/\[full\]/)
     "stretch"
   elsif comment.gsub(/\[end\]/,'').length == 0
     "no-comment"
+  elsif comment.match(/\[offset-up\]/)
+    "offset-up"
+  elsif comment.match(/\[offset-down\]/)
+    "offset-down"
   else
     ""
   end
 end
 
 def look_for_multiline(comment)
-  clean_comment = comment.gsub(/\[end\]/,'').gsub(/\[full\] /,'')
+  clean_comment = comment
+    .gsub(/\[\S*?\]/,'')
 
   stretch = comment.match(/\[full\]/) ? "stretch" : ""
 
