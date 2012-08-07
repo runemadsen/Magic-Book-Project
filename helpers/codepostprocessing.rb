@@ -59,7 +59,7 @@ def addStylesToCodeLines(code)
       styled_code << codeline
     else
       # There was an inline code, look for styles
-      style_match = codeline.match(/\[(.*)\]/)
+      style_match = codeline.match(/\/\/\[(.*)\]/)
 
       styled_line = codeline.gsub(/ *<span class="c1">(.*?)<\/span> */,'')
 
