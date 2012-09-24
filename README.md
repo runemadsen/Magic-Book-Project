@@ -2,30 +2,17 @@
 
 ### [The Magic Book Project](https://github.com/runemadsen/Magic-Book-Project)
 
-The Magic Book Project is an open-source framework that facilitates the design and 
-production of electronic and print books for authors.  
+The Magic Book Project is an open-source framework that facilitates the design and production of electronic and print books for authors.
 
-Here’s a circa-2008 scenario for you.  An author is excited to hear that a big company has 
-decided to publish their book.  The author sits down and types a lot of text into Microsoft 
-Word.  e publisher takes that text and “typesets” it using Adobe InDesign, painstakingly 
-laying out each individual page by hand. To market the book, the author decides to post an 
-excerpt from the book online as HTML and performs an elaborate contortion of copying/
-pasting and reformatting.   The book is published and is offered for sale for ﬁfty dollars.  An 
-ebook is also for sale for ﬁfty dollars.  e author receives a few dollars when a book is sold.  
-Anyone on the internet, however, can easily download a free, illegal PDF version of the book.
+Here’s a circa-2008 scenario for you.  An author is excited to hear that a big company has decided to publish their book. The author sits down and types a lot of text into Microsoft Word.  The publisher takes that text and “typesets” it using Adobe InDesign, painstakingly laying out each individual page by hand. To market the book, the author decides to post an 
+excerpt from the book online as HTML and performs an elaborate contortion of copying/pasting and reformatting.   The book is published and is offered for sale for fifty dollars.  An ebook is also for sale for ﬁfty dollars.  The author receives a few dollars when a book is sold.  Anyone on the internet, however, can easily download a free, illegal PDF version of the book.
 
 See any problems with this scenario?
 
-This is is the impetus behind the Magic Book Project, developed by a small team of ITP faculty, 
-researchers, and students.   Thee Magic Book Project seeks to help authors self-publish in 
-variety of formats, making books available to the widest audience possible at the cheapest 
-prices.
+This is is the impetus behind the Magic Book Project, developed by a small team of ITP faculty, researchers, and students.The Magic Book Project seeks to help authors self-publish in variety of formats, making books available to the widest audience possible at the cheapest prices.
 
-Rather than type into a word processor, the Magic Book Project allows an author to write 
-their book once (using ASCIIDOC, a simple text document format) and procedurally 
-generated the layout for a variety of formats using modern code-based design tools, such as 
-CSS, the stylesheet standard.   Write your book once, press a magic button, and out come 
-multiple versions: printed hardcopy, digital PDF, HTML, MOBI, and EPUB.
+Rather than type into a word processor, the Magic Book Project allows an author to write their book once (using ASCIIDOC, a simple text document format) and procedurally generated the layout for a variety of formats using modern code-based design tools, such as CSS, the stylesheet standard.   Write your book once, press a magic button, and out come multiple versions: printed hardcopy, digital PDF, HTML, MOBI, and EPUB.
+
 
 ## Installing the App
 
