@@ -9,7 +9,7 @@ See any problems with this scenario?
 
 This is is the impetus behind the Magic Book Project, developed by a small team of ITP faculty, researchers, and students.The Magic Book Project seeks to help authors self-publish in variety of formats, making books available to the widest audience possible at the cheapest prices.
 
-Rather than type into a word processor, the Magic Book Project allows an author to write their book once (using ASCIIDOC, a simple text document format) and procedurally generated the layout for a variety of formats using modern code-based design tools, such as CSS, the stylesheet standard.   Write your book once, press a magic button, and out come multiple versions: printed hardcopy, digital PDF, HTML, MOBI, and EPUB.
+Rather than type into a word processor, the Magic Book Project allows an author to write a book once (using ASCIIDOC, a simple text document format) and procedurally generate the layout for a variety of formats using modern code-based design tools, such as CSS, the stylesheet standard.   Write your book once, press a magic button, and out come multiple versions: printed hardcopy, digital PDF, HTML, MOBI, and EPUB.
 
 
 ## Installing the App
