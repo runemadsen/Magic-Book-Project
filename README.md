@@ -1,6 +1,6 @@
 ## What is this project?
 
-*[The Magic Book Project](https://github.com/runemadsen/Magic-Book-Project) is an open-source framework that facilitates the design and production of electronic and print books for authors.*
+**[The Magic Book Project](https://github.com/runemadsen/Magic-Book-Project) is an open-source framework that facilitates the design and production of electronic and print books for authors.**
 
 Here’s a circa-2008 scenario for you.  An author is excited to hear that a big company has decided to publish their book. The author sits down and types a lot of text into Microsoft Word.  The publisher takes that text and “typesets” it using Adobe InDesign, painstakingly laying out each individual page by hand. To market the book, the author decides to post an 
 excerpt from the book online as HTML and performs an elaborate contortion of copying/pasting and reformatting.   The book is published and is offered for sale for fifty dollars.  An ebook is also for sale for ﬁfty dollars.  The author receives a few dollars when a book is sold.  Anyone on the internet, however, can easily download a free, illegal PDF version of the book.
