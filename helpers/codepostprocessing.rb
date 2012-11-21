@@ -9,6 +9,9 @@ def formatCodeCommentPairs(code, comment)
     response = "<div class='code-comment-pair #{comment_type(comment)}'>"
     response += look_for_multiline(comment)
     response += "<code><pre>#{parseCode(code)}</pre></code>"
+    if is_multiline(comment)
+      response += "<div style='position:relative;clear:both;display:block;height:1px;width:100%;'></div>"
+    end
     response += "</div>"
     response
   end
@@ -26,6 +29,10 @@ def comment_type(comment)
   else
     ""
   end
+end
+
+def is_multiline(comment)
+  comment.match(/\[full\]/)
 end
 
 def look_for_multiline(comment)
