@@ -38,18 +38,38 @@ class Application < Sinatra::Base
     startTime = Time.now
     puts "///////// Starting Render: #{startTime}"
 
-    # first render html
+    # create asciidocument
     @document = AsciiDoc::AsciiDocument.new(asciidoc_file, { :debug_xml_to_file => File.join(output_folder, "index.xml") })
     puts "Parsed Asciidoc after: #{Time.now-startTime} seconds"
 
+    #render html
     @document.render(:html, :template => File.join(output_folder, "views"), :output => File.join(output_folder, "index.html"))
     puts "Rendered HTML after: #{Time.now-startTime} seconds"
+    
+    # render page count pdf
+    @document.render(:pdf,  :html_file => File.join(output_folder, "index.html"), 
+                            :output => File.join(output_folder, "page_count.pdf"),
+                            :prince_args => {
+                              "--script" => File.join(output_folder, "page_count", "page_count.js"), 
+                              "--style" => File.join(output_folder, "page_count", "page_count.css"), 
+                              "-i" => "html5",
+                              ">"=> File.join(output_folder, "page_count", "out.js")
+                            }
+    )
+    puts "Rendered Page Count PDF after: #{Time.now-startTime} seconds"
 
-    @document.render(:pdf, :html_file => File.join(output_folder, "index.html"), :output => File.join(output_folder, "index.pdf"))
+    # render final pdf
+    @document.render(:pdf,  :html_file => File.join(output_folder, "index.html"), 
+                            :output => File.join(output_folder, "index.pdf"),
+                            :prince_args => [
+                              ["--script", File.join(output_folder, "page_count", "page_filter.js")], 
+                              ["--script", File.join(output_folder, "page_count", "out.js")], 
+                              "--verbose",
+                              ["-i", "html5"]
+                            ]
+    )
     puts "Rendered PDF after: #{Time.now-startTime} seconds"
 
-    puts "DONE! Rendered in: #{Time.now-startTime} seconds"
-    
     "Done in in: #{Time.now-startTime} seconds"
   end
 
