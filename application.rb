@@ -49,16 +49,16 @@ class Application < Sinatra::Base
     # render page count pdf
     @document.render(:pdf,  :html_file => File.join(output_folder, "index.html"), 
                             :output => File.join(output_folder, "page_count.pdf"),
-                            :prince_args => {
-                              "--script" => File.join(output_folder, "page_count", "page_count.js"), 
-                              "--style" => File.join(output_folder, "page_count", "page_count.css"), 
-                              "-i" => "html5",
-                              ">"=> File.join(output_folder, "page_count", "out.js")
-                            }
+                            :prince_args => [
+                              ["--script", File.join(output_folder, "page_count", "page_count.js")], 
+                              ["--style", File.join(output_folder, "page_count", "page_count.css")], 
+                              ["-i", "html5"],
+                              [">", File.join(output_folder, "page_count", "out.js")]
+                            ]
     )
     puts "Rendered Page Count PDF after: #{Time.now-startTime} seconds"
 
-    # render final pdf
+    #render final pdf
     @document.render(:pdf,  :html_file => File.join(output_folder, "index.html"), 
                             :output => File.join(output_folder, "index.pdf"),
                             :prince_args => [
