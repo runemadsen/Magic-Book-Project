@@ -24,6 +24,10 @@ Rather than type into a word processor, the Magic Book Project allows an author 
 
         $ bundle install
 
+   One of the gems we use, Nokogiri, has some system pre-requirements. Under Ubuntu 12.04, before you run `bundle install` you need to install the development libraries for xml and xslt with 
+
+        $ sudo apt-get install libxml2-dev libxslt1-dev
+
 4. We are using a custom build of the asciidoc gem. To keep track of changes to
 this gem use git [submodules](http://git-scm.com/book/en/Git-Tools-Submodules).
 From the root of the repository run the following two commands to initialize
