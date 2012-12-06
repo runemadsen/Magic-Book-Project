@@ -19,7 +19,7 @@ Rather than type into a word processor, the Magic Book Project allows an author 
         $ git clone https://github.com/runemadsen/Magic-Book-Project.git
         $ cd Magic-Book-Project
 
-2. Use Ruby 1.9.3. To manage multiple rubies, install either [RVM](https://rvm.io//) or [rbenv](https://github.com/sstephenson/rbenv).
+2. Use Ruby 1.9.3. To manage multiple rubies, install either [RVM](https://rvm.io//), [rbenv](https://github.com/sstephenson/rbenv), or [chruby](https://github.com/postmodern/chruby).
 3. Run bundler to install gems (if you don't have bundler do `$ gem install bundler`).
 
         $ bundle install
