@@ -42,6 +42,10 @@ get the asciidoc keg like so
 
         $ brew install asciidoc
 
+    Under Ubuntu, you'll need to install asciidoc with
+
+        $ sudo apt-get install asciidoc
+
 ### Notes
 
 If your book will include code blocks you'll need to install pygments for
@@ -49,11 +53,26 @@ syntax highlighting.
 
         $ sudo easy_install Pygments
 
+    Under Ubuntu, it's probably better to install it as a system package:
+
+        $ sudo apt-get install python-pygments
+
 ## To run the app
 
 1. `cd Magic-Book-Project`
 2. `shotgun config.ru`
-3. Then visit: localhost:9393/create_html/:filename in your browser
+3. Then visit in your browser one of these urls: 
+
+ * localhost:9393/create_html/:filename 
+ * localhost:9393/create_html_chapters/:filename
+ * localhost:9393/create_pdf/:filename
+
+   where `:filename` is the path to an `.asc`, `.asciidoc` or `.txt` file.
+
+   Note: For the time being, the asciidoc gem uses Prince XML for PDF
+   rendering (we are using this until we find a good, open-source HTML to PDF
+   renderer). If you want to produce PDF output, you'l need to download and
+   install it from http://www.princexml.com/download/.
 
 If it's been a while since you've used this app, update the asciidoc gem by
 running `$ git submodule update`.
