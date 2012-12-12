@@ -29,6 +29,7 @@ Rather than type into a word processor, the Magic Book Project allows an author 
         $ sudo apt-get install libxml2-dev libxslt1-dev
 
    On Mac OS X Mountain Lion with XCode 4.5.2 Developer tools, in order to get Nokogiri to work, I had to do the following before bundle install:
+
         $ sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2
         $ brew install libxml2 --with-xml2-config
         $ brew link libxml2
