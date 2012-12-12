@@ -28,6 +28,12 @@ Rather than type into a word processor, the Magic Book Project allows an author 
 
         $ sudo apt-get install libxml2-dev libxslt1-dev
 
+   On Mac OS X Mountain Lion with XCode 4.5.2 Developer tools, in order to get Nokogiri to work, I had to do the following before bundle install:
+        $ sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2
+        $ brew install libxml2 --with-xml2-config
+        $ brew link libxml2
+        $ gem install nokogiri -- --with-xml2-include=/usr/local/Cellar/libxml2/2.8.0/include/libxml2/ --with-xml2-lib=/usr/local/Cellar/libxml2/2.8.0/lib/ --with-xslt-dir=/usr/local/Cellar/libxslt/1.1.26/
+
 4. We are using a custom build of the asciidoc gem. To keep track of changes to
 this gem use git [submodules](http://git-scm.com/book/en/Git-Tools-Submodules).
 From the root of the repository run the following two commands to initialize
