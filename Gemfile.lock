@@ -12,8 +12,10 @@ GEM
   specs:
     macaddr (1.6.1)
       systemu (~> 2.5.0)
+    mini_portile2 (2.4.0)
     mustache (0.99.4)
-    nokogiri (1.5.5)
+    nokogiri (1.10.5)
+      mini_portile2 (~> 2.4.0)
     posix-spawn (0.3.6)
     rack (1.4.1)
     rack-protection (1.2.0)
