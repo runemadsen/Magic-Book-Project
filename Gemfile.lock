@@ -15,7 +15,7 @@ GEM
     mustache (0.99.4)
     nokogiri (1.5.5)
     posix-spawn (0.3.6)
-    rack (1.4.1)
+    rack (1.6.12)
     rack-protection (1.2.0)
       rack
     redcarpet (2.1.0)
