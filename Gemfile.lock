@@ -18,7 +18,7 @@ GEM
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
-    redcarpet (2.1.0)
+    redcarpet (3.5.1)
     rocco (0.8.2)
       mustache
       redcarpet
